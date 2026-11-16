@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Party Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <nav>
+    <a href="#details">Details</a>
+    <a href="#guests">Guests</a>
+    <a href="#checklist">Checklist</a>
+    <a href="#budget">Budget</a>
+    <a href="#report-section">Report</a>
+  </nav>
+
+  <header>
+    <img src="banner.png" alt="Happy Birthday Banner" class="banner-img">
+
+
+  </header>
+
+  <main>
+
+    <!-- 1. Party details -->
+    <section id="details">
+      <h2>Party Details</h2>
+
+      <label for="name">Birthday person's name</label>
+      <input type="text" id="name" placeholder="e.g. Riya">
+
+      <label for="age">Age turning</label>
+      <input type="number" id="age" min="1">
+
+      <label for="date">Date</label>
+      <input type="date" id="date">
+
+      <label for="time">Time</label>
+      <input type="time" id="time">
+
+      <label for="venue">Venue</label>
+      <input type="text" id="venue" placeholder="e.g. Home, Garden, Cafe">
+
+      <label for="theme">Theme</label>
+      <select id="theme">
+        <option>Classic</option>
+        <option>Superhero</option>
+        <option>Disney</option>
+        <option>Beach</option>
+        <option>Retro</option>
+      </select>
+
+      <label for="notes">Notes</label>
+      <textarea id="notes" rows="3" placeholder="Anything else to remember"></textarea>
+    </section>
+
+    <!-- 2. Guest list -->
+    <section id="guests">
+      <h2>Guest List</h2>
+
+      <div class="row">
+        <input type="text" id="gName" placeholder="Guest name">
+        <input type="text" id="gPhone" placeholder="Phone">
+        <select id="gStatus">
+          <option>Yes</option>
+          <option>Maybe</option>
+          <option>No</option>
+        </select>
+        <button type="button" onclick="addGuest()">Add</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Coming?</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="guestBody"></tbody>
+      </table>
+      <p class="hint" id="guestCount">Total guests: 0</p>
+    </section>
+
+    <!-- 3. Checklist -->
+    <section id="checklist">
+      <h2>Checklist</h2>
+      <ul class="checklist">
+        <li><input type="checkbox" id="c1"> <label for="c1">Book the venue</label></li>
+        <li><input type="checkbox" id="c2"> <label for="c2">Send invitations</label></li>
+        <li><input type="checkbox" id="c3"> <label for="c3">Order the cake</label></li>
+        <li><input type="checkbox" id="c4"> <label for="c4">Buy decorations</label></li>
+        <li><input type="checkbox" id="c5"> <label for="c5">Plan food and drinks</label></li>
+        <li><input type="checkbox" id="c6"> <label for="c6">Arrange music and games</label></li>
+        <li><input type="checkbox" id="c7"> <label for="c7">Buy return gifts</label></li>
+      </ul>
+    </section>
+
+    <!-- 4. Budget (editable) -->
+    <section id="budget">
+      <h2>Budget</h2>
+
+      <label for="plate">Food cost per plate (₹)</label>
+      <input type="number" id="plate" min="0" value="200" oninput="updateTotal()">
+
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Cost (₹)</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="foodLabel">Food</td>
+            <td id="foodCost">0</td>
+            <td></td>
+          </tr>
+        </tbody>
+        <tbody id="budgetBody"></tbody>
+        <tfoot>
+          <tr class="total">
+            <td>Total</td>
+            <td id="total">0</td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+      <button type="button" onclick="addBudgetRow('', 0)">+ Add item</button>
+    </section>
+
+    <!-- 5. Report -->
+    <section id="report-section">
+      <h2>Report</h2>
+      <button type="button" onclick="generateReport()">Generate Report</button>
+      <button type="button" id="downloadBtn" onclick="downloadReport()" disabled>Download as Image</button>
+
+      <div id="report"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Made by [Your Name] | B.Tech CSE, 1st Year</p>
+  </footer>
+
+  <!-- Library used only to turn the report into an image -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
