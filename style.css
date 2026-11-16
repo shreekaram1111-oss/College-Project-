@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #111111;
+  margin: 0;
+  line-height: 1.5;
+}
+
+
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+header h1 {
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin: 5px 0 0;
+  color: #777777;
+}
+
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+section {
+  padding: 25px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #555555;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #cccccc;
+  border-radius: 0;
+  font-size: 1rem;
+  background-color: #ffffff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #111111;
+}
+
+
+button {
+  padding: 8px 16px;
+  background-color: #111111;
+  color: #ffffff;
+  border: 1px solid #111111;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  border-color: #cccccc;
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+button.small {
+  margin: 0;
+  padding: 4px 10px;
+  background-color: #ffffff;
+  color: #111111;
+  border: 1px solid #cccccc;
+}
+
+button.small:hover {
+  border-color: #111111;
+}
+
+
+.row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.row input,
+.row select {
+  flex: 1;
+  min-width: 100px;
+  margin-top: 0;
+}
+
+.row button {
+  margin-top: 0;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 8px 4px;
+  text-align: left;
+}
+
+th {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+td input {
+  margin-top: 0;
+  border: 1px solid transparent;
+  padding: 6px;
+}
+
+td input:hover {
+  border-color: #cccccc;
+}
+
+.total td {
+  font-weight: 600;
+  border-bottom: none;
+  border-top: 2px solid #111111;
+}
+
+.hint {
+  color: #777777;
+  font-size: 0.9rem;
+}
+
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checklist li {
+  padding: 4px 0;
+}
+
+.checklist label {
+  display: inline;
+  margin: 0;
+  font-size: 1rem;
+  color: #111111;
+}
+
+
+#report {
+  margin-top: 20px;
+  background-color: #ffffff;
+}
+
+.report-box {
+  border: 1px solid #111111;
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+.report-box h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.report-box h4 {
+  margin: 22px 0 6px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #777777;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 4px;
+}
+
+.report-box p {
+  margin: 3px 0;
+}
+
+.report-box table td,
+.report-box table th {
+  padding: 4px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+  color: #777777;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navigation Bar Styling */
+nav {
+  background-color: #111111;
+  padding: 12px 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: Helvetica, Arial, sans-serif;
+  transition: opacity 0.2s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+/* Banner Image Styling */
+.banner-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px auto;
+  object-fit: contain;
+}
